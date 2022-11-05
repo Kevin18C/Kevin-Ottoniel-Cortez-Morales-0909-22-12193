@@ -1,0 +1,80 @@
+<!-- La mayoria de funcionalidades funciona solo que no encontre la manera de especificar que solo se mostrara la que es sino 
+que se muestran todas-->
+<!--Voy a incluir los archivos en uno solo-->
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo salario</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1>Calculo salario</h1>
+
+        <label for="">Ingrese su nombre:</label>
+        <input type="text" name="Nombre" id="Nom"><br><br>
+
+        <label for="">Ingrese su cargo:</label>
+        <input type="text" name="cargo" id="cargo"><br><br>
+
+        <label for="">Cantidad de horas extras:</label>
+        <input type="number" name="horas extras" id="extras">
+
+        <input type="button" value="Calcular" onclick="salario()">
+    </form>
+
+
+    <script>
+        function salario(){
+            var nombre=document.getElementById('Nom').value;
+            var Puesto=document.getElementById('cargo').value;
+            var horas=parseInt(document.getElementById('extras').value);
+            var extras=18.50;
+            var bono=250;
+            var calculo_horas_extras=horas*extras;
+            var resultado=+bono+calculo_horas_extras;
+
+            var supervisor=4250;
+            var secretaria=3500;
+            var digitador=3500;
+            var mensajero=3000;
+
+            if (puesto=supervisor) {
+                resultado1=4250+bono+calculo_horas_extras;
+                alert("Su nombre es: " +nombre + ", Su cargo es:" + "  Supervisor"+ ",  su salario es: Q"+resultado1);
+            }
+            
+        
+            if (puesto=secretaria) {
+                resultado2=3500+bono+calculo_horas_extras;
+                alert("Su nombre es: " +nombre +  ",  su cargo es:" + "  secretaria"+",  su salario es: Q"+resultado2);
+            }
+            
+            if (puesto=digitador) {
+                resultado3=3500+bono+calculo_horas_extras;
+                alert("Su nombre es: " +nombre + ",  su cargo es: " + "  Digitador" + ",  su salario es: Q"+resultado3);
+            }
+
+            if (puesto=mensajero) {
+                resultado4=3000+bono+calculo_horas_extras;
+                alert("Su nombre es: " +nombre + ",  Su cargo es: " +"  Mensajero" +",  su salario es: Q"+resultado4);
+            }
+
+           
+            
+        }
+        
+        
+
+    </script>
+    
+</body>
+</html>
